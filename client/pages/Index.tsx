@@ -38,52 +38,50 @@ export default function Index() {
 
       {/* Hero Section */}
       <section className="relative bg-background border-b border-secondary">
-        <div className="max-w-7xl mx-auto px-6 lg:px-22 py-22">
-          <div className="flex items-start justify-between">
+        <div className="max-w-[1440px] mx-auto px-22 py-22">
+          <div className="flex items-start justify-between min-h-[418px]">
             {/* Main Title */}
-            <div className="flex-1 max-w-4xl">
+            <div className="flex-1 max-w-[946px] relative">
               <div className="space-y-6">
-                <h1 className="font-display text-6xl lg:text-8xl font-bold leading-tight">
-                  <span className="text-white">Start earning today on</span>
-                  <br />
-                  <span className="gradient-text text-right block mt-4">ADVERTISING</span>
-                  <br />
-                  <span className="gradient-text text-5xl lg:text-8xl font-normal">EXCHANGE</span>
+                <h1 className="font-display leading-tight">
+                  <div className="text-white text-[80px] font-bold leading-[96px]">Start earning today on</div>
+                  <div className="gradient-text text-[128px] font-semibold leading-[154px] text-right">ADVERTISING</div>
+                  <div className="gradient-text text-[80px] font-normal leading-[96px] text-right">EXCHANGE</div>
                 </h1>
               </div>
-              
+
               {/* CTA Button */}
-              <div className="mt-16">
-                <button className="bg-primary text-background px-16 py-20 font-display text-4xl font-normal">
+              <div className="absolute bottom-0 left-0">
+                <button className="bg-primary text-background w-[323px] h-[180px] font-display text-[36px] font-normal flex items-center justify-center">
                   Current data
                 </button>
               </div>
             </div>
 
             {/* CTA Sidebar */}
-            <div className="w-89 bg-secondary border border-secondary p-12">
-              <p className="text-text-dimmed text-xl leading-relaxed">
+            <div className="w-[356px] h-[418px] bg-secondary border border-secondary flex items-center justify-center p-12">
+              <p className="text-text-dimmed text-xl leading-relaxed w-[220px]">
                 Become a verified ad space provider and start earning passively today.
               </p>
             </div>
           </div>
 
           {/* Stats */}
-          <div className="flex items-center justify-center gap-16 mt-24">
+          <div className="flex items-center justify-center gap-[68px] mt-16">
             <div className="text-center">
-              <div className="font-display text-4xl font-normal text-white">163.34 BTC</div>
+              <div className="font-display text-[40px] font-normal text-white leading-[48px]">163.34 BTC</div>
               <div className="text-text-dimmed-2 text-xl mt-2">Lifetime earnings</div>
             </div>
             <div className="text-center">
-              <div className="font-display text-4xl font-normal text-white">1365</div>
+              <div className="font-display text-[40px] font-normal text-white leading-[48px]">1365</div>
               <div className="text-text-dimmed-2 text-xl mt-2">Sales</div>
             </div>
             <div className="text-center">
-              <div className="font-display text-4xl font-normal text-white">34</div>
+              <div className="font-display text-[40px] font-normal text-white leading-[48px]">34</div>
               <div className="text-text-dimmed-2 text-xl mt-2">Locations</div>
             </div>
             <div className="text-center">
-              <div className="font-display text-4xl font-normal text-white">2300</div>
+              <div className="font-display text-[40px] font-normal text-white leading-[48px]">2300</div>
               <div className="text-text-dimmed-2 text-xl mt-2">Active items</div>
             </div>
           </div>
