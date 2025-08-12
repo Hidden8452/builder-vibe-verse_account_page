@@ -4,86 +4,98 @@
 
 @layer base {
   /**
-   * Tailwind CSS theme
+   * Tailwind CSS theme - Updated for Advertising Exchange design
    * tailwind.config.ts expects the following color variables to be expressed as HSL values.
    * A different format will require also updating the theme in tailwind.config.ts.
   */
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Main background colors */
+    --background: 213 84% 11%; /* #080134 */
+    --background-secondary: 235 61% 9%; /* #0B062D */
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 213 84% 11%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 213 84% 11%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary brand colors */
+    --primary: 186 99% 39%; /* #01C5BA */
+    --primary-foreground: 213 84% 11%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 240 18% 23%; /* #393556 */
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 240 18% 23%;
+    --muted-foreground: 250 6% 63%; /* #9C99AE */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 186 99% 39%;
+    --accent-foreground: 213 84% 11%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 240 18% 23%; /* #393556 */
+    --input: 240 18% 23%;
+    --ring: 186 99% 39%;
 
     --radius: 0.5rem;
 
+    /* Custom colors for the design */
+    --brand-blue: 206 98% 34%; /* #016DB0 */
+    --brand-cyan: 172 100% 50%; /* #01FFCA */
+    --text-light: 210 18% 95%; /* #F1F2F2 */
+    --text-lighter: 210 18% 99%; /* #FCFCFD */
+    --text-muted: 250 6% 63%; /* #9C99AE */
+    --text-dimmed: 243 10% 83%; /* #E6E6EB */
+    --text-dimmed-2: 247 10% 80%; /* #CECCD6 */
+    --accent-dark-green: 194 87% 32%; /* #064462 */
+    --accent-dark-purple: 298 60% 24%; /* #2D1446 */
+    --accent-light-purple: 284 81% 73%; /* #C379F6 */
+    --accent-light-yellow: 46 100% 70%; /* #FFD166 */
+    --accent-dark-pink: 297 62% 34%; /* #561857 */
+
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 213 84% 11%;
+    --background-secondary: 235 61% 9%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 213 84% 11%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 213 84% 11%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 186 99% 39%;
+    --primary-foreground: 213 84% 11%;
 
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 240 18% 23%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 240 18% 23%;
+    --muted-foreground: 250 6% 63%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 186 99% 39%;
+    --accent-foreground: 213 84% 11%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 240 18% 23%;
+    --input: 240 18% 23%;
+    --ring: 186 99% 39%;
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -102,5 +114,27 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Epilogue', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'League Spartan', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+}
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800;900&family=League+Spartan:wght@400;500;600;700;800;900&display=swap');
+
+/* Custom gradient utilities */
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(90deg, hsl(var(--brand-blue)) 1.29%, hsl(var(--brand-cyan)) 99.94%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-bg {
+    background: linear-gradient(90deg, hsl(var(--brand-blue)) 1.29%, hsl(var(--brand-cyan)) 99.94%);
   }
 }
