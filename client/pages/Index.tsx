@@ -4,16 +4,16 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-background">
       {/* Top Navigation */}
-      <nav className="w-full bg-background border-b border-secondary">
-        <div className="max-w-7xl mx-auto px-6 lg:px-22 py-5">
+      <nav className="w-full bg-background">
+        <div className="max-w-[1440px] mx-auto px-22 pt-5 pb-5">
           <div className="flex items-center justify-between">
             {/* Logo and Search */}
             <div className="flex items-center gap-10">
-              <div className="w-32 h-6 bg-gradient-text"></div>
-              <div className="relative flex items-center w-96 border-2 border-secondary bg-background rounded px-4 py-2">
+              <div className="w-32 h-6"></div>
+              <div className="relative flex items-center w-[386px] border-2 border-secondary bg-background px-4 py-2">
                 <Search className="w-6 h-6 text-text-light mr-3" />
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   placeholder="Search by tags, themes, artists, etc"
                   className="flex-1 bg-transparent text-text-muted placeholder-text-muted outline-none"
                 />
@@ -22,18 +22,16 @@ export default function Index() {
 
             {/* Navigation Menu */}
             <div className="flex items-center gap-8">
-              <span className="text-text-light font-medium">Market</span>
-              <div className="flex items-center gap-1">
-                <span className="text-white font-medium">Activity</span>
-                <ChevronDown className="w-4 h-4 text-white" />
-              </div>
-              <span className="text-primary font-medium">Account</span>
+              <span className="text-text-light">Market</span>
+              <span className="text-white">Activity</span>
+              <span className="text-primary">Account</span>
               <button className="px-8 py-2 border border-primary text-text-lighter font-semibold hover:bg-primary hover:text-background transition-colors">
                 Connect
               </button>
             </div>
           </div>
         </div>
+        <div className="w-full h-px bg-secondary"></div>
       </nav>
 
       {/* Hero Section */}
