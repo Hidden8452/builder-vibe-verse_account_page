@@ -417,8 +417,20 @@ export default function Index() {
             <div className="grid grid-cols-2 gap-6">
               <div>
                 <label className="block text-text-dimmed text-sm mb-2 opacity-70">Ask price</label>
-                <div className="text-white text-sm">0.01 ETH - 10 ETH</div>
-                {/* Price range slider would go here */}
+                <div className="space-y-4">
+                  <div className="relative">
+                    <div className="h-4 bg-white opacity-10 rounded-full"></div>
+                    <div className="absolute top-0 h-4 bg-brand-blue rounded-full" style={{width: '53%'}}></div>
+                    <div className="absolute top-0 left-[53%] transform -translate-x-1/2 -mt-6">
+                      <div className="bg-text-lighter px-2 py-1 text-xs text-background font-bold">5 ETH</div>
+                      <div className="w-6 h-6 bg-brand-blue rounded-full border-4 border-text-lighter shadow-lg"></div>
+                    </div>
+                  </div>
+                  <div className="flex justify-between text-white text-sm">
+                    <span>0.01 ETH</span>
+                    <span>10 ETH</span>
+                  </div>
+                </div>
               </div>
               <div>
                 <label className="block text-text-dimmed text-sm mb-2 opacity-70">Create Listing</label>
