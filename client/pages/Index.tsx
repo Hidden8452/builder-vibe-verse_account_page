@@ -88,122 +88,126 @@ export default function Index() {
 
       {/* Newest Listings Section */}
       <section className="bg-background border-b border-secondary">
-        <div className="flex">
-          {/* Main Content */}
-          <div className="flex-1 p-22">
-            <div className="flex items-center justify-between mb-22">
-              <h2 className="font-display text-4xl font-normal text-white">Newest Listings</h2>
-              <div className="flex gap-2">
-                <button className="p-3 border border-primary bg-background">
-                  <ArrowLeft className="w-5 h-5 text-white" />
-                </button>
-                <button className="p-3 border border-primary bg-background">
-                  <ArrowRight className="w-5 h-5 text-white" />
-                </button>
+        <div className="max-w-[1440px] mx-auto">
+          <div className="flex">
+            {/* Main Content */}
+            <div className="w-[966px] p-22">
+              <div className="flex items-center justify-between mb-22">
+                <h2 className="font-display text-[40px] font-normal text-white leading-[48px]">Newest Listings</h2>
+                <div className="flex gap-2">
+                  <button className="p-3 border border-primary bg-background">
+                    <ArrowLeft className="w-5 h-5 text-white" />
+                  </button>
+                  <button className="p-3 border border-primary bg-background">
+                    <ArrowRight className="w-5 h-5 text-white" />
+                  </button>
+                </div>
               </div>
-            </div>
 
-            <div className="border border-secondary p-8 flex gap-8">
-              {/* Left Content */}
-              <div className="flex-1 py-8">
-                <div className="space-y-6">
-                  <h3 className="font-display text-6xl font-bold text-white leading-tight">
-                    NY, Times Square 3D Giga LED
-                  </h3>
-                  
-                  <div className="flex items-center gap-3">
-                    <div className="w-6 h-6 rounded-full bg-gray-400"></div>
-                    <span className="text-text-lighter text-sm">by MAX Bilboards</span>
-                  </div>
-                  
-                  <p className="text-text-dimmed">
-                    New York, Times square. December 2025. Giga 3D LED Screen.
-                  </p>
-                  
-                  <div className="space-y-2">
-                    <p className="text-text-muted">
-                      355 biddings. 35 in last hour<br />
-                      Auction Ends in 48 hours
-                    </p>
-                    <div className="flex gap-2">
-                      <span className="px-2 py-1 border border-secondary text-white text-sm">#NY</span>
-                      <span className="px-2 py-1 border border-secondary text-white text-sm">#hot spot</span>
-                      <span className="px-2 py-1 border border-secondary text-white text-sm">#3D</span>
+              <div className="border border-secondary p-8 flex gap-8 h-[580px]">
+                {/* Left Content */}
+                <div className="w-[368px] py-8 flex flex-col justify-between">
+                  <div className="space-y-4">
+                    <h3 className="font-display text-[64px] font-bold text-white leading-[77px]">
+                      NY, Times Square 3D Giga LED
+                    </h3>
+
+                    <div className="flex items-center gap-3">
+                      <div className="w-6 h-6 rounded-full bg-gray-400"></div>
+                      <span className="text-text-lighter text-sm">by MAX Bilboards</span>
                     </div>
-                  </div>
-                </div>
 
-                <div className="flex items-center justify-between mt-8">
-                  <span className="text-text-muted">Views: 10k</span>
-                  <div className="flex gap-2">
-                    <button className="flex items-center gap-2 px-3 py-2 border border-primary text-white text-sm">
-                      <Heart className="w-4 h-4" />
-                      1.k
-                    </button>
-                    <button className="p-2 border border-primary">
-                      <Share2 className="w-4 h-4 text-white" />
-                    </button>
-                    <button className="p-2 border border-primary">
-                      <MoreHorizontal className="w-4 h-4 text-white" />
-                    </button>
-                  </div>
-                </div>
-              </div>
+                    <p className="text-text-dimmed">
+                      New York, Times square. December 2025. Giga 3D LED Screen.
+                    </p>
 
-              {/* Center Image */}
-              <div className="flex-1">
-                <img 
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/2cc4212920d0e9ac9c4309a13029e75333071e76?width=892" 
-                  alt="Times Square LED Display"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Right Sidebar */}
-          <div className="w-96 bg-background-secondary border-l border-secondary p-8">
-            <div className="space-y-6">
-              <div className="space-y-6">
-                <div className="flex justify-between">
-                  <div>
-                    <div className="text-text-dimmed-2 text-sm">Ask Price</div>
-                    <div className="font-display text-xl text-white">1.00 BTC</div>
-                  </div>
-                  <div>
-                    <div className="text-text-dimmed-2 text-sm font-bold">Last Bid</div>
-                    <div className="font-display text-xl text-white">2,354 BTC</div>
-                  </div>
-                </div>
-                
-                <button className="w-full bg-primary text-background py-2 px-8 font-semibold">
-                  Change price
-                </button>
-              </div>
-
-              <div className="space-y-4">
-                <h4 className="text-text-dimmed-2 text-lg">10 people already bidded</h4>
-                
-                <div className="space-y-4">
-                  {[
-                    { amount: "1.00 BTC", user: "@JorgeLRZ" },
-                    { amount: "0.90 BTC", user: "@Gregorz" },
-                    { amount: "0.82 BTC", user: "@LaylazR9" },
-                    { amount: "0.79 BTC", user: "@Mortaly" }
-                  ].map((bid, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-full bg-gray-400"></div>
-                      <div>
-                        <div className="text-white font-bold">{bid.amount}</div>
-                        <div className="text-text-dimmed text-sm opacity-80">{bid.user}</div>
+                    <div className="space-y-2">
+                      <p className="text-text-muted">
+                        355 biddings. 35 in last hour<br />
+                        Auction Ends in 48 hours
+                      </p>
+                      <div className="flex gap-2">
+                        <span className="px-1 py-0.5 border border-secondary text-white text-sm">#NY</span>
+                        <span className="px-1 py-0.5 border border-secondary text-white text-sm">#hot spot</span>
+                        <span className="px-1 py-0.5 border border-secondary text-white text-sm">#3D</span>
                       </div>
                     </div>
-                  ))}
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <span className="text-text-muted">Views: 10k</span>
+                    <div className="flex gap-2">
+                      <button className="flex items-center gap-2 px-3 py-2 border border-primary text-white text-sm">
+                        <Heart className="w-4 h-4" />
+                        1.k
+                      </button>
+                      <button className="p-2 border border-primary">
+                        <Share2 className="w-4 h-4 text-white" />
+                      </button>
+                      <button className="p-2 border border-primary">
+                        <MoreHorizontal className="w-4 h-4 text-white" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Center Image */}
+                <div className="flex-1">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/2cc4212920d0e9ac9c4309a13029e75333071e76?width=892"
+                    alt="Times Square LED Display"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
+            </div>
 
-              <div className="text-center">
-                <p className="text-red-500 font-display text-3xl font-normal opacity-80">List new dates</p>
+            {/* Right Sidebar */}
+            <div className="w-[474px] bg-background-secondary border-l border-secondary p-8">
+              <div className="py-8 flex flex-col justify-between h-[580px]">
+                <div className="space-y-6">
+                  <div className="space-y-6">
+                    <div className="flex justify-between w-[322px]">
+                      <div>
+                        <div className="text-text-dimmed-2">Ask Price</div>
+                        <div className="font-display text-xl text-white leading-[24px]">1.00 BTC</div>
+                      </div>
+                      <div>
+                        <div className="text-text-dimmed-2 font-bold">Last Bid</div>
+                        <div className="font-display text-xl text-white leading-[24px]">2,354 BTC</div>
+                      </div>
+                    </div>
+
+                    <button className="w-[322px] bg-primary text-background py-2 px-8 font-semibold">
+                      Change price
+                    </button>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h4 className="text-text-dimmed-2 text-lg">10 people already bidded</h4>
+
+                    <div className="space-y-4 w-[132px]">
+                      {[
+                        { amount: "1.00 BTC", user: "@JorgeLRZ" },
+                        { amount: "0.90 BTC", user: "@Gregorz" },
+                        { amount: "0.82 BTC", user: "@LaylazR9" },
+                        { amount: "0.79 BTC", user: "@Mortaly" }
+                      ].map((bid, index) => (
+                        <div key={index} className="flex items-center gap-3">
+                          <div className="w-8 h-8 rounded-full bg-gray-400"></div>
+                          <div>
+                            <div className="text-white font-bold">{bid.amount}</div>
+                            <div className="text-text-dimmed text-sm opacity-80">{bid.user}</div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="text-center">
+                  <p className="text-red-500 font-display text-[32px] font-normal opacity-80 leading-[51px]">List new dates</p>
+                </div>
               </div>
             </div>
           </div>
