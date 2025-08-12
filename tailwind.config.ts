@@ -100,8 +100,8 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       fontFamily: {
-        sans: ['Epilogue', 'system-ui', 'sans-serif'],
-        display: ['League Spartan', 'system-ui', 'sans-serif'],
+        sans: ["Epilogue", "system-ui", "sans-serif"],
+        display: ["League Spartan", "system-ui", "sans-serif"],
       },
     },
   },
