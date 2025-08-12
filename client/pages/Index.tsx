@@ -312,27 +312,36 @@ export default function Index() {
       <section className="bg-background p-22 text-center border-b border-secondary">
         <h2 className="font-display text-6xl font-normal text-white mb-8">Portfolio builder</h2>
         
-        <div className="grid grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-4 gap-8 mb-8 max-w-[1264px] mx-auto">
           {[
-            { title: "New York, Times square", status: "HOT", price: "3.00 BTC", likes: "2.7 k", owner: "NY AdBros inc." },
-            { title: "Hong Kong, Wang Street", status: "Featured", price: "3.00 BTC", likes: "3.5 k", owner: "Wolfgang Slashhaut" },
-            { title: "Tokyo, Shibuya", price: "3.00 BTC", likes: "890", owner: "Bambietta Basterbine" },
-            { title: "Dubai, Airport", price: "3.00 BTC", likes: "24", owner: "Berenice Gabrielli" }
+            { title: "New York, Times square", status: "HOT", price: "3.00 BTC", likes: "2.7 k", owner: "NY AdBros inc.", image: "a41e3c7bdaf886b77349adb0d8f747a01531530c" },
+            { title: "Hong Kong, Wang Street", status: "Featured", price: "3.00 BTC", likes: "3.5 k", owner: "Wolfgang Slashhaut", image: "91040dd6b1740bb130ca1a37c6aa23ae6b878d4a" },
+            { title: "Tokyo, Shibuya", price: "3.00 BTC", likes: "890", owner: "Bambietta Basterbine", image: "54db23c01abbced5a61ce059b888b7ccf11a6aad" },
+            { title: "Dubai, Airport", price: "3.00 BTC", likes: "24", owner: "Berenice Gabrielli", image: "b44c864936150793ecabe22f1b816ed5e669e8b1" }
           ].map((item, index) => (
             <div key={index} className="border-2 border-secondary bg-background">
-              <div className="relative">
-                <img 
-                  src={`https://api.builder.io/api/v1/image/assets/TEMP/${index === 0 ? 'a41e3c7bdaf886b77349adb0d8f747a01531530c' : index === 1 ? '91040dd6b1740bb130ca1a37c6aa23ae6b878d4a' : index === 2 ? '54db23c01abbced5a61ce059b888b7ccf11a6aad' : 'b44c864936150793ecabe22f1b816ed5e669e8b1'}?width=584`}
+              <div className="relative h-[304px]">
+                <img
+                  src={`https://api.builder.io/api/v1/image/assets/TEMP/${item.image}?width=584`}
                   alt={item.title}
-                  className="w-full h-76 object-cover"
+                  className="w-full h-full object-cover"
                 />
                 {item.status && (
-                  <div className={`absolute top-4 left-4 px-2 py-1 text-sm ${item.status === 'HOT' ? 'bg-accent-dark-purple text-accent-light-purple' : 'bg-accent-dark-pink text-pink-400'}`}>
+                  <div className={`absolute top-4 left-4 px-2 py-1 text-sm flex items-center gap-1 ${item.status === 'HOT' ? 'bg-accent-dark-purple text-accent-light-purple' : 'bg-accent-dark-pink text-pink-400'}`}>
+                    {item.status === 'HOT' ? (
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6-1.5-1.5-2.5-1-2.5-1s1 1 1 2.5c0 .6-.2 1.1-.4 1.5-.2.4-.6.9-1.1.9s-.9-.5-1.1-.9c-.2-.4-.4-.9-.4-1.5 0-1.5 1-2.5 1-2.5s-1-.5-2.5 1c-2 2-2.5 4.5-2.5 6 0 3.5 2.686 5.5 6 5.5z"/>
+                      </svg>
+                    ) : (
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8 0l2.5 5h5.5l-4.5 3.5 1.5 5.5-4.5-3.5-4.5 3.5 1.5-5.5-4.5-3.5h5.5z"/>
+                      </svg>
+                    )}
                     {item.status}
                   </div>
                 )}
               </div>
-              
+
               <div className="p-4 space-y-2">
                 <h3 className="text-white text-xl font-medium">{item.title}</h3>
                 <div className="flex justify-between items-center">
@@ -342,13 +351,17 @@ export default function Index() {
                   </div>
                   <span className="text-text-dimmed-2">Available</span>
                 </div>
-                
+
                 <hr className="border-secondary" />
-                
+
                 <div className="flex justify-between items-center">
                   <div className="flex items-center gap-3">
                     <div className="w-6 h-6 rounded-full bg-gray-400 relative">
-                      <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-blue-500 rounded-full border border-background"></div>
+                      <div className="absolute -bottom-1 -right-1 w-2.5 h-2.5 bg-blue-500 rounded-full border border-background flex items-center justify-center">
+                        <svg className="w-2 h-2 text-white" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                        </svg>
+                      </div>
                     </div>
                     <span className="text-text-dimmed text-sm">{item.owner}</span>
                   </div>
