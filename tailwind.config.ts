@@ -18,6 +18,7 @@ export default {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
+        "background-secondary": "hsl(var(--background-secondary))",
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
@@ -57,6 +58,19 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Custom brand colors
+        "brand-blue": "hsl(var(--brand-blue))",
+        "brand-cyan": "hsl(var(--brand-cyan))",
+        "text-light": "hsl(var(--text-light))",
+        "text-lighter": "hsl(var(--text-lighter))",
+        "text-muted": "hsl(var(--text-muted))",
+        "text-dimmed": "hsl(var(--text-dimmed))",
+        "text-dimmed-2": "hsl(var(--text-dimmed-2))",
+        "accent-dark-green": "hsl(var(--accent-dark-green))",
+        "accent-dark-purple": "hsl(var(--accent-dark-purple))",
+        "accent-light-purple": "hsl(var(--accent-light-purple))",
+        "accent-light-yellow": "hsl(var(--accent-light-yellow))",
+        "accent-dark-pink": "hsl(var(--accent-dark-pink))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -84,6 +98,10 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      fontFamily: {
+        sans: ['Epilogue', 'system-ui', 'sans-serif'],
+        display: ['League Spartan', 'system-ui', 'sans-serif'],
       },
     },
   },
